@@ -27,12 +27,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     // final exchangeRateBloc = BlocProvider.of<ExchangeRateBloc>(context);
-      //     // exchangeRateBloc.getExchangeRates();
-      //   },
-      // ),
       appBar: customAppBar,
       body: Container(
         margin: const EdgeInsets.only(top: 20),
