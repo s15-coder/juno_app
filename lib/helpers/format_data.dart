@@ -6,7 +6,7 @@ class FormatData {
     final now = DateTime.now();
     switch (timeRange) {
       case TimeRange.oneDay:
-        final date = now.subtract(const Duration(days: 1));
+        final date = now.subtract(const Duration(days: 2));
         return getDateFormatted(date);
 
       case TimeRange.fiveDays:
