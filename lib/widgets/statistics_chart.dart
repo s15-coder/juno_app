@@ -69,7 +69,7 @@ class _StatisticsChartState extends State<StatisticsChart> {
           series: <RangeAreaSeries<Result, String>>[
             RangeAreaSeries<Result, String>(
               onPointTap: (details) {
-                final pointsList = exchangeRate.results;
+                final pointsList = exchangeRate!.results;
                 final resultSelected = pointsList[details.pointIndex!];
 
                 exchangeRateProvider.selectResult(
@@ -78,7 +78,7 @@ class _StatisticsChartState extends State<StatisticsChart> {
               },
               gradient: gradientColors,
               highValueMapper: (result, index) {
-                if (exchangeRate.results.length > 1) {
+                if (exchangeRate!.results.length > 1) {
                   return result.closed;
                 }
                 if (index == 0) {
@@ -94,7 +94,7 @@ class _StatisticsChartState extends State<StatisticsChart> {
               },
 
               // Bind data source
-              dataSource: exchangeRate.results,
+              dataSource: exchangeRate?.results ?? [],
               xValueMapper: (Result result, int index) {
                 switch (state.currentTimeRange!) {
                   case TimeRange.oneDay:

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:juno_app/widgets/custom_card.dart';
 import 'package:juno_app/widgets/statistics_chart.dart';
+import 'package:juno_app/theme/custom_color_scheme.dart';
 
 class StatisticsContainer extends StatefulWidget {
   const StatisticsContainer({Key? key}) : super(key: key);
@@ -24,18 +25,19 @@ class _StatisticsContainerState extends State<StatisticsContainer> {
               margin: const EdgeInsets.symmetric(vertical: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Text(
                     'TRM',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Theme.of(context).colorScheme.oppositeColor,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Text(
                     'USD > COP',
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.oppositeColor),
                   ),
                 ],
               ),

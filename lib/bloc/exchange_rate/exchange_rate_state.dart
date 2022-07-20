@@ -28,10 +28,14 @@ class ExchangeRateState extends Equatable {
             exchangeRatesDefaultTime ?? this.exchangeRatesDefaultTime,
         selectedResult: selectedResult ?? this.selectedResult,
       );
-  ExchangeRate getCurrentExchangeRate() {
-    final cachedExchangeRate = exchangeRatesDefaultTime.firstWhere(
-        (exchangeRate) => exchangeRate.timeRange == currentTimeRange);
-    return cachedExchangeRate;
+  ExchangeRate? getCurrentExchangeRate() {
+    try {
+      final cachedExchangeRate = exchangeRatesDefaultTime.firstWhere(
+          (exchangeRate) => exchangeRate.timeRange == currentTimeRange);
+      return cachedExchangeRate;
+    } catch (e) {
+      return null;
+    }
   }
 
   ExchangeRate? getCachedExchangeRate(TimeRange timeRange) {

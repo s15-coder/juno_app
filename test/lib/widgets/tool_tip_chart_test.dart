@@ -49,7 +49,7 @@ void main() {
       await tester.pumpWidget(pumpWidget);
       final currencyResult = getPointerCurrency(index);
       final currency = FormatData.valueCurrency(exchangeRateBloc.state
-          .getCurrentExchangeRate()
+          .getCurrentExchangeRate()!
           .results[index]
           .closed);
       expect(currency, currencyResult);
@@ -59,7 +59,7 @@ void main() {
       await tester.pumpWidget(pumpWidget);
       final currencyResult = getPointerCurrency(index);
       final currency = FormatData.valueCurrency(exchangeRateBloc.state
-          .getCurrentExchangeRate()
+          .getCurrentExchangeRate()!
           .results[index]
           .closed);
       expect(currency, currencyResult);
@@ -71,7 +71,7 @@ void main() {
       await tester.pumpWidget(pumpWidget);
       final dateResult = getPointerDate(index);
       final date = FormatData.getDateFormatted(
-          exchangeRateBloc.state.getCurrentExchangeRate().results[index].time);
+          exchangeRateBloc.state.getCurrentExchangeRate()!.results[index].time);
       expect(date, dateResult);
     });
     testWidgets('Second index', (tester) async {
@@ -79,7 +79,7 @@ void main() {
       await tester.pumpWidget(pumpWidget);
       final dateResult = getPointerDate(index);
       final date = FormatData.getDateFormatted(
-          exchangeRateBloc.state.getCurrentExchangeRate().results[index].time);
+          exchangeRateBloc.state.getCurrentExchangeRate()!.results[index].time);
       expect(date, dateResult);
     });
   });

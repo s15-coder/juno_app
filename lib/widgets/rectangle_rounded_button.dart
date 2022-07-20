@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:juno_app/config/config.dart';
+import 'package:juno_app/theme/custom_color_scheme.dart';
 
 class RectangleRoundedButton extends StatelessWidget {
   const RectangleRoundedButton({
@@ -21,9 +22,13 @@ class RectangleRoundedButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: filled ? blueJuno : Colors.white,
+          color: filled ? blueJuno : Theme.of(context).canvasColor,
           border: Border.all(
-            color: filled ? Colors.white : blueJuno,
+            color: filled
+                ? Colors.white
+                : filled
+                    ? blueJuno
+                    : Theme.of(context).colorScheme.blueOrWhite,
           ),
           borderRadius: const BorderRadius.all(
             Radius.circular(15),
@@ -35,7 +40,9 @@ class RectangleRoundedButton extends StatelessWidget {
         child: Text(
           label ?? '',
           style: TextStyle(
-            color: filled ? Colors.white : Colors.red,
+            color: filled
+                ? Colors.white
+                : Theme.of(context).colorScheme.blueOrWhite,
             fontSize: fontSize ?? 12,
           ),
         ),

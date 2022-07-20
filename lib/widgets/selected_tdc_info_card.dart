@@ -6,6 +6,7 @@ import 'package:juno_app/helpers/format_data.dart';
 import 'package:juno_app/widgets/custom_card.dart';
 import 'package:juno_app/widgets/rectangle_rounded_button.dart';
 import 'package:juno_app/widgets/styles/inputs.dart';
+import 'package:juno_app/theme/custom_color_scheme.dart';
 
 class SelectedTdcInfoCard extends StatelessWidget {
   const SelectedTdcInfoCard({Key? key}) : super(key: key);
@@ -30,7 +31,8 @@ class SelectedTdcInfoCard extends StatelessWidget {
                   children: [
                     Text(
                       FormatData.valueCurrency(state.selectedResult?.closed),
-                      style: Inputs.h1(),
+                      style: Inputs.h1(
+                          color: Theme.of(context).colorScheme.oppositeColor),
                     ),
                     const RectangleRoundedButton(
                       filled: true,
@@ -46,7 +48,8 @@ class SelectedTdcInfoCard extends StatelessWidget {
                       fit: BoxFit.fill,
                       child: Text(
                         state.selectedResult != null ? '= 1 USD' : '= ------',
-                        style: Inputs.h5(),
+                        style: Inputs.h5(
+                            color: Theme.of(context).colorScheme.oppositeColor),
                       ),
                     ),
                     Text(

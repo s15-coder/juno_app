@@ -9,7 +9,6 @@ ThemeData darkTheme = ThemeData(
   primaryColor: greenJuno,
   textTheme: darkTextTheme,
   appBarTheme: const AppBarTheme(
-    color: Colors.black,
     systemOverlayStyle: SystemUiOverlayStyle.dark,
   ),
   radioTheme: RadioThemeData(

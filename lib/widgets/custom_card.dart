@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:juno_app/config/config.dart';
+import 'package:juno_app/theme/custom_color_scheme.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({
@@ -19,7 +19,8 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: greyCard, borderRadius: BorderRadius.circular(10)),
+          color: Theme.of(context).colorScheme.cardColor,
+          borderRadius: BorderRadius.circular(10)),
       width: width,
       height: height,
       padding: padding,

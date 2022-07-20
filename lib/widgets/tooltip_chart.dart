@@ -29,7 +29,7 @@ String getPointerCurrency(int index) {
       BlocProvider.of<ExchangeRateBloc>(navigatorKey.currentState!.context);
   final exchangeRate = exchangeRateProvider.state.getCurrentExchangeRate();
 
-  return FormatData.valueCurrency(exchangeRate.results[index].closed);
+  return FormatData.valueCurrency(exchangeRate!.results[index].closed);
 }
 
 String getPointerDate(int index) {
@@ -37,5 +37,5 @@ String getPointerDate(int index) {
       BlocProvider.of<ExchangeRateBloc>(navigatorKey.currentState!.context);
   final exchangeRate = exchangeRateProvider.state.getCurrentExchangeRate();
 
-  return FormatData.getDateFormatted(exchangeRate.results[index].time);
+  return FormatData.getDateFormatted(exchangeRate!.results[index].time);
 }

@@ -27,13 +27,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar,
       body: Container(
         margin: const EdgeInsets.only(top: 20),
         child: Stack(
           children: [
             Column(
               children: const [
+                CustomAppBar(),
                 SelectedTdcInfoCard(),
                 SizedBox(height: 30),
                 StatisticsContainer(),
