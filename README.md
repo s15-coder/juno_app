@@ -45,3 +45,33 @@ flutter-app/
 |- lib
 |- test
 ```
+
+This is the estructure used specifically in this project:
+
+```
+lib/
+|- bloc
+|- config
+|- helpers
+|- models
+|- pages
+|- routes
+|- services
+|- theme
+|- widgets
+```
+
+Now, lets dive into the lib folder which has the main code for the application.
+
+```
+1- bloc - Contains the different BLoCs used along the application
+2- config - Global variables which may change the app behavior 
+3- helpers - Code that may be used in different parts of the app to complement functionality.
+4- models - Contains all the models or templates of the data used along the app.
+5- pages - Contains the files where are sited the app screens.
+6- routes - All functionality related to navition inside the app.
+7- services - Contains the implementation of determined features in a comprehensible way.
+8- theme - All settings related to the app theme (DarkMode or LightMode)
+9- widgets - UI components of the application which may be reused.
+```
+
