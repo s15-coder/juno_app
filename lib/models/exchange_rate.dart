@@ -1,4 +1,4 @@
-import 'package:juno_app/models/result_model.dart';
+import 'package:juno_app/models/result.dart';
 
 enum TimeRange { oneDay, fiveDays, oneMonth, oneYear, twoYears }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:juno_app/bloc/exchange_rate/exchange_rate_bloc.dart';
-import 'package:juno_app/models/exchange_rates_deault_time.dart';
+import 'package:juno_app/models/exchange_rate.dart';
 import 'package:juno_app/widgets/rectangle_rounded_button.dart';
 
 class DefaultTimesList extends StatelessWidget {

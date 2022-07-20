@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:juno_app/bloc/exchange_rate/exchange_rate_bloc.dart';
 import 'package:juno_app/config/config.dart';
-import 'package:juno_app/models/exchange_rates_deault_time.dart';
-import 'package:juno_app/models/result_model.dart';
+import 'package:juno_app/models/exchange_rate.dart';
+import 'package:juno_app/models/result.dart';
 import 'package:juno_app/widgets/tooltip_chart.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 

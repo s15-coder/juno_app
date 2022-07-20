@@ -17,8 +17,6 @@ class RectangleRoundedButton extends StatelessWidget {
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -37,8 +35,9 @@ class RectangleRoundedButton extends StatelessWidget {
         child: Text(
           label ?? '',
           style: TextStyle(
-              color: filled ? Colors.white : blueJuno,
-              fontSize: fontSize ?? 12),
+            color: filled ? Colors.white : Colors.red,
+            fontSize: fontSize ?? 12,
+          ),
         ),
       ),
     );

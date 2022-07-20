@@ -4,7 +4,7 @@
 
 import 'dart:convert';
 
-import 'package:juno_app/models/result_model.dart';
+import 'package:juno_app/models/result.dart';
 
 ExchangeRatesResponse exchangeRatesResponseFromJson(String str) =>
     ExchangeRatesResponse.fromJson(json.decode(str));

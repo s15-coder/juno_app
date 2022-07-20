@@ -29,8 +29,7 @@ class SelectedTdcInfoCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      FormatData.valueCurrency(state.selectedResult?.closed)
-                          .toString(),
+                      FormatData.valueCurrency(state.selectedResult?.closed),
                       style: Inputs.h1(),
                     ),
                     const RectangleRoundedButton(

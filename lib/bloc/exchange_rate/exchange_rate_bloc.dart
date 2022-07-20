@@ -4,9 +4,9 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:juno_app/helpers/format_data.dart';
-import 'package:juno_app/models/exchange_rates_deault_time.dart';
+import 'package:juno_app/models/exchange_rate.dart';
 import 'package:juno_app/models/responses/exchange_rates_response.dart';
-import 'package:juno_app/models/result_model.dart';
+import 'package:juno_app/models/result.dart';
 import 'package:juno_app/services/polygon_api.dart';
 import 'package:meta/meta.dart';
 

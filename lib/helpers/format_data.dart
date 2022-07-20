@@ -1,12 +1,12 @@
 import 'package:intl/intl.dart';
-import 'package:juno_app/models/exchange_rates_deault_time.dart';
+import 'package:juno_app/models/exchange_rate.dart';
 
 class FormatData {
   static String getTimeStringByRange(TimeRange timeRange) {
     final now = DateTime.now();
     switch (timeRange) {
       case TimeRange.oneDay:
-        final date = now.subtract(const Duration(days: 2));
+        final date = now.subtract(Duration(days: now.hour > 20 ? 1 : 2));
         return getDateFormatted(date);
 
       case TimeRange.fiveDays:

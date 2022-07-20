@@ -7,12 +7,12 @@ AppBar customAppBar = AppBar(
     style: TextStyle(color: Colors.black),
   ),
   elevation: 0,
-  actions: [
-    const CustomCircleAvatar(
+  actions: const [
+    CustomCircleAvatar(
         child: Icon(
       Icons.person_outline,
       color: Colors.black,
     )),
-    const SizedBox(width: 10)
+    SizedBox(width: 10)
   ],
 );
